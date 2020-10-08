@@ -31,7 +31,39 @@ jobs:
     - os: linux
       dist: bionic
       env: EMACS_CI=emacs-snapshot
-
+# code included to work on power system
+    - os: linux
+      dist: bionic
+      env: EMACS_CI=emacs-25-1
+      arch: ppc64le
+    - os: linux
+      dist: bionic
+      env: EMACS_CI=emacs-25-2
+      arch: ppc64le
+    - os: linux
+      dist: bionic
+      env: EMACS_CI=emacs-25-3
+      arch: ppc64le
+    - os: linux
+      dist: bionic
+      env: EMACS_CI=emacs-26-1
+      arch: ppc64le
+    - os: linux
+      dist: bionic
+      env: EMACS_CI=emacs-26-2
+      arch: ppc64le
+    - os: linux
+      dist: bionic
+      env: EMACS_CI=emacs-26-3
+      arch: ppc64le
+    - os: linux
+      dist: bionic
+      env: EMACS_CI=emacs-27-1
+      arch: ppc64le
+    - os: linux
+      dist: bionic
+      env: EMACS_CI=emacs-snapshot
+      arch: ppc64le
 before_install:
   - sudo mkdir -p /etc/nix
   - echo "substituters = https://cache.nixos.org/ file://$HOME/nix.store" | sudo tee -a /etc/nix/nix.conf > /dev/null
